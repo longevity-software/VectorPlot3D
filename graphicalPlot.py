@@ -24,7 +24,7 @@ class graphicalPlot(FigureCanvas):
         FigureCanvas.updateGeometry(self)
 
         # create an axis with 3D projection
-        self.__graphAxis = fig.add_subplot(111, projection='3d')
+        self._graphAxis = fig.add_subplot(111, projection='3d')
 
         # show the plot
         plt.show()
@@ -32,7 +32,7 @@ class graphicalPlot(FigureCanvas):
     # public method to update the graph
     def updateGraph(self, vectors):
         # clear the graph axis
-        self.__graphAxis.cla()
+        self._graphAxis.cla()
         #
         # min and max values used for axis scaling
         max_values_set = False
@@ -64,7 +64,7 @@ class graphicalPlot(FigureCanvas):
                 z_min = min(vect[0][2], vect[1][2], z_min)
             #
             # add the vector as a quiver with no arrow head
-            self.__graphAxis.quiver(vect[0][0], 
+            self._graphAxis.quiver(vect[0][0], 
                                     vect[0][1], 
                                     vect[0][2], 
                                     (vect[1][0] - vect[0][0]), 
@@ -75,13 +75,13 @@ class graphicalPlot(FigureCanvas):
         #
         # if a vector has been added then the max_values_set will be true so update the axis limits
         if(True == max_values_set):
-            self.__graphAxis.set_xlim([x_min, x_max])
-            self.__graphAxis.set_xlabel('x')
-            self.__graphAxis.set_ylim([y_min, y_max])
-            self.__graphAxis.set_ylabel('y')
-            self.__graphAxis.set_zlim([z_min, z_max])
-            self.__graphAxis.set_zlabel('z')
-            self.__graphAxis.set_title('vector plot')
+            self._graphAxis.set_xlim([x_min, x_max])
+            self._graphAxis.set_xlabel('x')
+            self._graphAxis.set_ylim([y_min, y_max])
+            self._graphAxis.set_ylabel('y')
+            self._graphAxis.set_zlim([z_min, z_max])
+            self._graphAxis.set_zlabel('z')
+            self._graphAxis.set_title('vector plot')
         # 
         # draw the graph
         self.draw()
