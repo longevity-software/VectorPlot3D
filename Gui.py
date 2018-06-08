@@ -31,10 +31,15 @@ class Gui(QtWidgets.QMainWindow):
         self._vector1Show.resize(50, 20)
         self._vector1Show.move(440,0)
 
-        vector1XLabel = QtWidgets.QLabel("X", self)
-        vector1XLabel.setAlignment(QtCore.Qt.AlignCenter)
-        vector1XLabel.resize(150,20)
-        vector1XLabel.move(10,20)
+        vector1FromLabel = QtWidgets.QLabel("From [x] [y] [z]", self)
+        vector1FromLabel.setAlignment(QtCore.Qt.AlignCenter)
+        vector1FromLabel.resize(245, 20)
+        vector1FromLabel.move(0,20)
+
+        vector1ToLabel = QtWidgets.QLabel("To [x] [y] [z]", self)
+        vector1ToLabel.setAlignment(QtCore.Qt.AlignCenter)
+        vector1ToLabel.resize(245, 20)
+        vector1ToLabel.move(245,20)
 
         validator = QtGui.QDoubleValidator()
 
@@ -42,37 +47,27 @@ class Gui(QtWidgets.QMainWindow):
         self._vector1XInputA.setValidator(validator)
         self._vector1XInputA.resize(70, 20)
         self._vector1XInputA.move(10,40)
-        
-        self._vector1XInputB = QtWidgets.QLineEdit(self)
-        self._vector1XInputB.setValidator(validator)
-        self._vector1XInputB.resize(70, 20)
-        self._vector1XInputB.move(90,40)
-        
-        vector1YLabel = QtWidgets.QLabel("Y", self)
-        vector1YLabel.setAlignment(QtCore.Qt.AlignCenter)
-        vector1YLabel.resize(150,20)
-        vector1YLabel.move(170,20)
 
         self._vector1YInputA = QtWidgets.QLineEdit(self)
         self._vector1YInputA.setValidator(validator)
         self._vector1YInputA.resize(70, 20)
-        self._vector1YInputA.move(170,40)
-        
-        self._vector1YInputB = QtWidgets.QLineEdit(self)
-        self._vector1YInputB.setValidator(validator)
-        self._vector1YInputB.resize(70, 20)
-        self._vector1YInputB.move(250,40)
-        
-        vector1ZLabel = QtWidgets.QLabel("Z", self)
-        vector1ZLabel.setAlignment(QtCore.Qt.AlignCenter)
-        vector1ZLabel.resize(150,20)
-        vector1ZLabel.move(330,20)
+        self._vector1YInputA.move(90,40)
 
         self._vector1ZInputA = QtWidgets.QLineEdit(self)
         self._vector1ZInputA.setValidator(validator)
         self._vector1ZInputA.resize(70, 20)
-        self._vector1ZInputA.move(330,40)
-
+        self._vector1ZInputA.move(170,40)
+                
+        self._vector1XInputB = QtWidgets.QLineEdit(self)
+        self._vector1XInputB.setValidator(validator)
+        self._vector1XInputB.resize(70, 20)
+        self._vector1XInputB.move(250,40)
+        
+        self._vector1YInputB = QtWidgets.QLineEdit(self)
+        self._vector1YInputB.setValidator(validator)
+        self._vector1YInputB.resize(70, 20)
+        self._vector1YInputB.move(330,40)
+        
         self._vector1ZInputB = QtWidgets.QLineEdit(self)
         self._vector1ZInputB.setValidator(validator)
         self._vector1ZInputB.resize(70, 20)
@@ -89,46 +84,41 @@ class Gui(QtWidgets.QMainWindow):
         self._vector2Show.resize(50, 20)
         self._vector2Show.move(440,60)
 
-        vector2XLabel = QtWidgets.QLabel("X", self)
-        vector2XLabel.setAlignment(QtCore.Qt.AlignCenter)
-        vector2XLabel.resize(150,20)
-        vector2XLabel.move(10,80)
+        vector2FromLabel = QtWidgets.QLabel("From [x] [y] [z]", self)
+        vector2FromLabel.setAlignment(QtCore.Qt.AlignCenter)
+        vector2FromLabel.resize(245, 20)
+        vector2FromLabel.move(0,80)
+
+        vector2ToLabel = QtWidgets.QLabel("To [x] [y] [z]", self)
+        vector2ToLabel.setAlignment(QtCore.Qt.AlignCenter)
+        vector2ToLabel.resize(245, 20)
+        vector2ToLabel.move(245,80)
 
         self._vector2XInputA = QtWidgets.QLineEdit(self)
         self._vector2XInputA.setValidator(validator)
         self._vector2XInputA.resize(70, 20)
         self._vector2XInputA.move(10,100)
 
-        self._vector2XInputB = QtWidgets.QLineEdit(self)
-        self._vector2XInputB.setValidator(validator)
-        self._vector2XInputB.resize(70, 20)
-        self._vector2XInputB.move(90,100)
-        
-        vector2YLabel = QtWidgets.QLabel("Y", self)
-        vector2YLabel.setAlignment(QtCore.Qt.AlignCenter)
-        vector2YLabel.resize(150,20)
-        vector2YLabel.move(170,80)
-
         self._vector2YInputA = QtWidgets.QLineEdit(self)
         self._vector2YInputA.setValidator(validator)
         self._vector2YInputA.resize(70, 20)
-        self._vector2YInputA.move(170,100)
-        
-        self._vector2YInputB = QtWidgets.QLineEdit(self)
-        self._vector2YInputB.setValidator(validator)
-        self._vector2YInputB.resize(70, 20)
-        self._vector2YInputB.move(250,100)
-        
-        vector2ZLabel = QtWidgets.QLabel("Z", self)
-        vector2ZLabel.setAlignment(QtCore.Qt.AlignCenter)
-        vector2ZLabel.resize(150,20)
-        vector2ZLabel.move(330,80)
+        self._vector2YInputA.move(90,100)
 
         self._vector2ZInputA = QtWidgets.QLineEdit(self)
         self._vector2ZInputA.setValidator(validator)
         self._vector2ZInputA.resize(70, 20)
-        self._vector2ZInputA.move(330,100)
-        
+        self._vector2ZInputA.move(170,100)
+
+        self._vector2XInputB = QtWidgets.QLineEdit(self)
+        self._vector2XInputB.setValidator(validator)
+        self._vector2XInputB.resize(70, 20)
+        self._vector2XInputB.move(250,100)
+                
+        self._vector2YInputB = QtWidgets.QLineEdit(self)
+        self._vector2YInputB.setValidator(validator)
+        self._vector2YInputB.resize(70, 20)
+        self._vector2YInputB.move(330,100)
+
         self._vector2ZInputB = QtWidgets.QLineEdit(self)
         self._vector2ZInputB.setValidator(validator)
         self._vector2ZInputB.resize(70, 20)
@@ -145,45 +135,40 @@ class Gui(QtWidgets.QMainWindow):
         self._vector3Show.resize(50, 20)
         self._vector3Show.move(440,120)
 
-        vector3XLabel = QtWidgets.QLabel("X", self)
-        vector3XLabel.setAlignment(QtCore.Qt.AlignCenter)
-        vector3XLabel.resize(150,20)
-        vector3XLabel.move(10,140)
+        vector3FromLabel = QtWidgets.QLabel("From [x] [y] [z]", self)
+        vector3FromLabel.setAlignment(QtCore.Qt.AlignCenter)
+        vector3FromLabel.resize(245, 20)
+        vector3FromLabel.move(0,140)
+
+        vector3ToLabel = QtWidgets.QLabel("To [x] [y] [z]", self)
+        vector3ToLabel.setAlignment(QtCore.Qt.AlignCenter)
+        vector3ToLabel.resize(245, 20)
+        vector3ToLabel.move(245,140)
 
         self._vector3XInputA = QtWidgets.QLineEdit(self)
         self._vector3XInputA.setValidator(validator)
         self._vector3XInputA.resize(70, 20)
         self._vector3XInputA.move(10,160)
 
-        self._vector3XInputB = QtWidgets.QLineEdit(self)
-        self._vector3XInputB.setValidator(validator)
-        self._vector3XInputB.resize(70, 20)
-        self._vector3XInputB.move(90,160)
-        
-        vector3YLabel = QtWidgets.QLabel("Y", self)
-        vector3YLabel.setAlignment(QtCore.Qt.AlignCenter)
-        vector3YLabel.resize(150,20)
-        vector3YLabel.move(170,140)
-
         self._vector3YInputA = QtWidgets.QLineEdit(self)
         self._vector3YInputA.setValidator(validator)
         self._vector3YInputA.resize(70, 20)
-        self._vector3YInputA.move(170,160)
+        self._vector3YInputA.move(90,160)
         
-        self._vector3YInputB = QtWidgets.QLineEdit(self)
-        self._vector3YInputB.setValidator(validator)
-        self._vector3YInputB.resize(70, 20)
-        self._vector3YInputB.move(250,160)
-        
-        vector3ZLabel = QtWidgets.QLabel("Z", self)
-        vector3ZLabel.setAlignment(QtCore.Qt.AlignCenter)
-        vector3ZLabel.resize(150,20)
-        vector3ZLabel.move(330,140)
-
         self._vector3ZInputA = QtWidgets.QLineEdit(self)
         self._vector3ZInputA.setValidator(validator)
         self._vector3ZInputA.resize(70, 20)
-        self._vector3ZInputA.move(330,160)
+        self._vector3ZInputA.move(170,160)
+
+        self._vector3XInputB = QtWidgets.QLineEdit(self)
+        self._vector3XInputB.setValidator(validator)
+        self._vector3XInputB.resize(70, 20)
+        self._vector3XInputB.move(250,160)
+                
+        self._vector3YInputB = QtWidgets.QLineEdit(self)
+        self._vector3YInputB.setValidator(validator)
+        self._vector3YInputB.resize(70, 20)
+        self._vector3YInputB.move(330,160)
         
         self._vector3ZInputB = QtWidgets.QLineEdit(self)
         self._vector3ZInputB.setValidator(validator)
